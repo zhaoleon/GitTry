@@ -1,5 +1,5 @@
 name: 'UE5-Build-Project'
-description: 'Cook, stage, and package projects for Unreal Engine'
+description: 'Cook, stage, and package projects for Unreal Engine project'
 author: 'Orchid Isle Games'
 branding:
   icon: 'anchor'
