@@ -18,4 +18,4 @@ jobs:
     steps:
       - name: "run script"
         run: |
-          echo "The build type is: ${{inputs.BuildType.type}}"
+          echo "The build type is: ${{inputs.BuildType}}"
