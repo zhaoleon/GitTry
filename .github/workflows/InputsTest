@@ -1,0 +1,12 @@
+name: Inputs Test
+
+on: 
+  workflow-dispatch:
+    inputs:
+      BuildType: [Development, Debug, Shipping]
+jobs:
+  testrun:
+    runs-on: ubuntu-latest
+    steps:
+      -name: run script
+       run: echo "The build type is: ${{inputs.BuildType}}"
