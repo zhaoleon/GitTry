@@ -3,10 +3,19 @@ name: Inputs Test
 on: 
   workflow_dispatch:
     inputs:
-      BuildType: [Development, Debug, Shipping]
+      BuildType: 
+        description: "Unreal Build Type"
+        type: choice
+        required: true
+        default: Development
+        options:
+          - Development
+          - Debug
+          - Shipping
 jobs:
   testrun:
     runs-on: ubuntu-latest
     steps:
-      -name: run script
-       run: echo "The build type is: ${{inputs.BuildType}}"
+      - name: "run script"
+        run: |
+          echo "The build type is: ${{inputs.environment.BuildType}}"
